@@ -1,0 +1,24 @@
+#cart-items {
+  width: 100%;
+  height: 100%;
+}
+
+.cart-items-container {
+  height: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cart-items-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cart-heading-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr 3fr 3fr;
+}
+
+.cart-headings {
+  font-weight: 400;
+}

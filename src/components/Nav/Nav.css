@@ -1,0 +1,101 @@
+#site-nav {
+  position: fixed;
+  width: calc(100% - 6rem);
+  height: 59px;
+  border-bottom: 1px solid #989389;
+  padding: 20px 3rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+  z-index: 8;
+}
+
+#site-nav.scrollUp {
+  transform: translateY(-100px);
+}
+
+.solid-bg {
+  background: #d6d2cb;
+}
+
+#hair-care-title {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.bolder {
+  font-weight: 500;
+}
+
+.menu-catalog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.nav-icon {
+  height: 2rem;
+  width: auto;
+}
+
+.search-cart-icons {
+  height: 1rem;
+  width: auto;
+}
+
+#cart-btn {
+  background-color: #3a3328;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  color: #d6d2cb;
+}
+
+#search-icon {
+  border: 1px solid #3a3328;
+  padding: 0.4rem;
+  border-radius: 50px;
+}
+
+.nav:hover {
+  transform: scale(0.95);
+  border-radius: 50px;
+}
+
+.nav:active {
+  transform: scale(0.92);
+}
+
+.search-input {
+  border: none;
+  border-bottom: 1px solid #3a3328;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem 0.2rem 0.2rem;
+  margin: 0;
+  outline: none;
+}

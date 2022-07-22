@@ -1,0 +1,99 @@
+#cart-item {
+  padding: 1rem 0;
+  margin: 0;
+}
+
+#cart-item p {
+  font-size: 1.1rem;
+}
+
+.cart-item-product {
+  display: grid;
+  grid-template-columns: 5fr 2fr 3fr 3fr;
+  align-items: center;
+}
+
+.cart-item-image-and-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-item-image {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.increase-decrease {
+  height: 35px;
+  width: 35px;
+}
+
+.increase-decrease:hover {
+  transform: scale(0.95);
+}
+
+.increase-decrease:active {
+  transform: scale(0.92);
+}
+
+.cart-item-name {
+  font-weight: 400;
+}
+
+.cart-item-category {
+  font-weight: 600;
+}
+
+.cart-item-quantity-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.price-and-remove {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.remove-btn {
+  height: 12px;
+  width: 12px;
+  object-fit: cover;
+}
+
+.remove-btn:hover {
+  transform: scale(0.9);
+}
+
+.remove-btn:active {
+  transform: scale(0.8);
+}
+
+.confirm-remove {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-confirm-btn {
+  align-items: center;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border: none;
+  background: #3a3328;
+  padding: 0.5rem 1.5rem;
+}
+
+.remove-confirm-btn:hover {
+  transform: scale(0.95);
+}
+
+.remove-confirm-btn:active {
+  transform: scale(0.9);
+}

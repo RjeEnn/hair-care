@@ -1,0 +1,51 @@
+.checkout-input-100 {
+  width: 100%;
+}
+.checkout-input-50 {
+  width: 45%;
+}
+
+.checkout-input-100,
+.checkout-input-50 {
+  border: none;
+  border-bottom: 1px solid #3a3328;
+  background: none;
+  outline: none;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.checkout-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.process-btn {
+  width: 25%;
+  min-width: 300px;
+  background-color: #3a3328;
+  color: #d6d2cb;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+}
+
+.how-to-pay {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.payment-selection {
+  margin-bottom: 2rem;
+}
+
+#payment-info label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

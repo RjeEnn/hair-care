@@ -1,0 +1,5 @@
+export { default as Home } from './home/Home'
+export { default as Catalog } from './catalog/Catalog'
+export { default as Cart } from './cart/Cart'
+export { default as Item } from './item/Item'
+export { default as Featured } from './featured/Featured'

@@ -1,0 +1,126 @@
+#cart {
+  height: 100vh;
+  z-index: 10;
+  width: 85vw;
+  min-width: 480px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: #d6d2cb;
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+#cart h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.shopping-cart {
+  padding: 2rem;
+  height: calc(100% - 4rem);
+  width: calc(75% - 4rem);
+}
+
+.cart-container {
+  width: 100%;
+  height: 80%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.shopping-cart-summary {
+  padding: 3rem 2rem;
+  padding-bottom: 5rem;
+  background-color: #c0aea0;
+  height: calc(100% - 6rem);
+  width: calc(25% - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.summary-text-container p {
+  font-size: 1.2rem;
+}
+
+.summary-text {
+  font-weight: 300;
+}
+
+.cart-back {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #3a3328;
+}
+
+.cart-back:hover {
+  transform: scale(0.98);
+}
+
+.cart-back:active {
+  transform: scale(0.97);
+}
+
+.summary-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-btn {
+  padding: 1rem 2rem;
+  width: calc(100% - 4rem);
+  background-color: #3a3328;
+  color: #d6d2cb;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.checkout-btn:hover {
+  transform: scale(0.98);
+}
+
+.checkout-btn:active {
+  transform: scale(0.97);
+}
+
+.invisible-btn {
+  opacity: 0;
+  transition: 0.5s;
+  cursor: default;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-flex > p {
+  font-weight: 500;
+}
