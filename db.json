@@ -6,7 +6,10 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/11/200/200",
         "https://picsum.photos/id/12/200/200",
@@ -21,7 +24,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 2,
@@ -29,7 +35,10 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 5.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/15/200/200",
         "https://picsum.photos/id/16/200/200",
@@ -38,8 +47,14 @@
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt inventore magnam doloribus labore veritatis incidunt alias rem itaque nesciunt!",
       "benefits": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis excepturi id voluptatem eos laudantium magni fugiat nulla placeat officia voluptas facere, possimus, laborum ipsam explicabo.",
-      "features": ["Damage Repair", "Damage Repair"],
-      "metrics": ["12 grams", "500ml"]
+      "features": [
+        "Damage Repair",
+        "Damage Repair"
+      ],
+      "metrics": [
+        "12 grams",
+        "500ml"
+      ]
     },
     {
       "id": 3,
@@ -47,7 +62,10 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 9.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/19/200/200",
         "https://picsum.photos/id/20/200/200",
@@ -56,8 +74,15 @@
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt inventore magnam doloribus labore veritatis incidunt alias rem itaque nesciunt!",
       "benefits": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis excepturi id voluptatem eos laudantium magni fugiat nulla placeat officia voluptas facere, possimus, laborum ipsam explicabo.",
-      "features": ["Damage Repair", "Damage Repair", "Damage Repair"],
-      "metrics": ["32 grams", "500ml"]
+      "features": [
+        "Damage Repair",
+        "Damage Repair",
+        "Damage Repair"
+      ],
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 4,
@@ -65,7 +90,10 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/23/200/200",
         "https://picsum.photos/id/24/200/200",
@@ -80,7 +108,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 5,
@@ -88,7 +119,10 @@
       "inStock": true,
       "type": "Conditioner",
       "price": 10.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/27/200/200",
         "https://picsum.photos/id/28/200/200",
@@ -103,7 +137,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 6,
@@ -111,7 +148,9 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 609090.5,
-      "genders": ["male"],
+      "genders": [
+        "male"
+      ],
       "images": [
         "https://picsum.photos/id/31/200/200",
         "https://picsum.photos/id/32/200/200",
@@ -126,7 +165,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 7,
@@ -134,15 +176,23 @@
       "inStock": false,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["female"],
+      "genders": [
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/35/200/200",
         "https://picsum.photos/id/36/200/200"
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt inventore magnam doloribus labore veritatis incidunt alias rem itaque nesciunt!",
       "benefits": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis excepturi id voluptatem eos laudantium magni fugiat nulla placeat officia voluptas facere, possimus, laborum ipsam explicabo.",
-      "features": ["Damage Repair", "Damage Repair"],
-      "metrics": ["32 grams", "500ml"]
+      "features": [
+        "Damage Repair",
+        "Damage Repair"
+      ],
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 8,
@@ -150,7 +200,9 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["male"],
+      "genders": [
+        "male"
+      ],
       "images": [
         "https://picsum.photos/id/37/200/200",
         "https://picsum.photos/id/38/200/200",
@@ -165,7 +217,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 9,
@@ -173,7 +228,9 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["female"],
+      "genders": [
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/41/200/200",
         "https://picsum.photos/id/42/200/200",
@@ -188,7 +245,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 10,
@@ -196,7 +256,9 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["female"],
+      "genders": [
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/45/200/200",
         "https://picsum.photos/id/46/200/200",
@@ -211,7 +273,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 11,
@@ -219,7 +284,10 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/49/200/200",
         "https://picsum.photos/id/50/200/200",
@@ -234,7 +302,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 12,
@@ -242,7 +313,10 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/53/200/200",
         "https://picsum.photos/id/54/200/200",
@@ -257,7 +331,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 13,
@@ -265,7 +342,9 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["male"],
+      "genders": [
+        "male"
+      ],
       "images": [
         "https://picsum.photos/id/57/200/200",
         "https://picsum.photos/id/58/200/200",
@@ -280,7 +359,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 14,
@@ -288,7 +370,10 @@
       "inStock": false,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/61/200/200",
         "https://picsum.photos/id/62/200/200",
@@ -303,7 +388,10 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     },
     {
       "id": 15,
@@ -311,7 +399,10 @@
       "inStock": true,
       "type": "Shampoo",
       "price": 10.99,
-      "genders": ["male", "female"],
+      "genders": [
+        "male",
+        "female"
+      ],
       "images": [
         "https://picsum.photos/id/65/200/200",
         "https://picsum.photos/id/66/200/200",
@@ -326,28 +417,27 @@
         "Damage Repair",
         "Damage Repair"
       ],
-      "metrics": ["32 grams", "500ml"]
+      "metrics": [
+        "32 grams",
+        "500ml"
+      ]
     }
   ],
   "cart": [
     {
       "id": 1,
-      "cartItems": [
-        {
-          "productId": 2,
-          "quantity": 2
-        },
-        {
-          "productId": 5,
-          "quantity": 3
-        }
-      ]
+      "cartItems": []
     }
   ],
   "featured": [
     {
       "id": 1,
-      "productIds": [1, 2, 5, 8]
+      "productIds": [
+        1,
+        2,
+        5,
+        8
+      ]
     }
   ]
 }

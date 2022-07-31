@@ -1,17 +1,19 @@
 #home {
   min-height: calc(100vh - 100px);
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  overflow: visible;
 }
 
 #model-image {
   position: fixed;
-  top: 10vh;
+  top: 100px;
   left: 0;
   height: 90vh;
+  min-height: 600px;
+  object-fit: cover;
 }
 
 .container {
@@ -67,4 +69,103 @@
 .home-arrow {
   height: 100%;
   width: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  #model-image {
+    position: relative !important;
+    display: block !important;
+    width: 80%;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  #home h3 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 3rem 5rem;
+    margin: auto;
+  }
+
+  .line-one,
+  .line-three {
+    margin: auto;
+    text-align: center;
+  }
+
+  .end {
+    text-align: center;
+    padding: 3rem 5rem;
+  }
+
+  .subscribe {
+    gap: 2rem;
+  }
+
+  #home .flex {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin: auto;
+  }
+
+  .pad-right {
+    padding-right: 0;
+  }
+
+  #home p {
+    text-align: center;
+  }
+}
+@media only screen and (max-height: 600px) {
+  #model-image {
+    position: relative !important;
+    display: block !important;
+    width: 80%;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  #home h3 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 3rem 5rem;
+    margin: auto;
+  }
+
+  .line-one,
+  .line-three {
+    margin: auto;
+    text-align: center;
+  }
+
+  .end {
+    text-align: center;
+    padding: 3rem 5rem;
+  }
+
+  .subscribe {
+    gap: 2rem;
+  }
+
+  #home .flex {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin: auto;
+  }
+
+  .pad-right {
+    padding-right: 0;
+  }
+
+  #home p {
+    text-align: center;
+  }
 }

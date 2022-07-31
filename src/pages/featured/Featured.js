@@ -68,10 +68,14 @@ const Featured = ({ products }) => {
               <div className="featured-product-container">
                 <div className="feature-name-container">
                   <div className="feature-purpose">
-                    <p className="purpose-head">Product Purpose</p>
-                    <p>Damage Repair</p>
-                    <p className="purpose-head">Product Type</p>
-                    <p>{feature.type}</p>
+                    <div>
+                      <p className="purpose-head">Product Purpose</p>
+                      <p>Damage Repair</p>
+                    </div>
+                    <div>
+                      <p className="purpose-head">Product Type</p>
+                      <p>{feature.type}</p>
+                    </div>
                   </div>
                   <h1>{feature.name}</h1>
                 </div>

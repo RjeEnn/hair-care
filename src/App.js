@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { Cart, Catalog, Featured, Home, Item } from './pages'
+import { About, Cart, Catalog, Contact, Featured, Home, Item } from './pages'
 import { Nav } from './components'
 import { useState, useEffect } from 'react'
 
@@ -7,6 +7,7 @@ function App() {
   const [searching, setSearching] = useState(false)
   const [products, setProducts] = useState([])
   const [cartClicked, setCartClicked] = useState(false)
+  const [mobileMenuClicked, setMobileMenuClicked] = useState(false)
 
   useEffect(() => {
     const getProducts = async () => {
@@ -18,10 +19,10 @@ function App() {
   }, [])
 
   useEffect(() => {
-    cartClicked
+    cartClicked || (mobileMenuClicked && window.innerWidth <= 889)
       ? (document.body.style.overflow = 'hidden')
       : (document.body.style.overflow = 'auto')
-  }, [cartClicked])
+  }, [cartClicked, mobileMenuClicked])
 
   const fetchProducts = async () => {
     const productUrl = `${process.env.REACT_APP_DATABASE_URL}/catalog`
@@ -41,23 +42,27 @@ function App() {
   var prevScrollpos = window.pageYOffset
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset
-    if (prevScrollpos > currentScrollPos) {
+    if (window.location.pathname === '/') {
       document.getElementById('site-nav').style.top = '0'
+      document.getElementById('mobile-menu-btn').style.display = 'block'
+      document.getElementById('mobile-cart-btn').style.display = 'block'
+    } else if (prevScrollpos > currentScrollPos) {
+      document.getElementById('site-nav').style.top = '0'
+      document.getElementById('mobile-menu-btn').style.display = 'block'
+      document.getElementById('mobile-cart-btn').style.display = 'block'
     } else if (
       window.scrollY > document.getElementById('site-nav').clientHeight
     ) {
       document.getElementById('site-nav').style.top = '-100px'
+      document.getElementById('mobile-menu-btn').style.display = 'none'
+      document.getElementById('mobile-cart-btn').style.display = 'none'
     }
     prevScrollpos = currentScrollPos
   }
 
   return (
     <Router>
-      <div
-        id="app"
-        className={cartClicked ? 'no-scroll' : ''}
-        onClick={() => handleSearchToggle()}
-      >
+      <div id="app" onClick={() => handleSearchToggle()}>
         {cartClicked ? (
           <Cart
             cartId={1}
@@ -76,11 +81,15 @@ function App() {
             searching={searching}
             setSearching={setSearching}
             setCartClicked={setCartClicked}
+            mobileMenuClicked={mobileMenuClicked}
+            setMobileMenuClicked={setMobileMenuClicked}
           />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/catalog" element={<Catalog products={products} />} />
             <Route path="/catalog/:id" element={<Item products={products} />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
             <Route
               path="/featured"
               element={<Featured products={products} />}

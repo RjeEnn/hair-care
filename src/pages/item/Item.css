@@ -1,6 +1,7 @@
 #catalog-item {
   --swiper-theme-color: #000;
   min-height: calc(100vh - 100px);
+  min-width: 600px;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -203,7 +204,7 @@
 
 #catalog-item .swiper {
   width: 100%;
-  min-width: 480px;
+  min-width: 400px;
   height: 100%;
   margin-top: 1rem;
   margin-bottom: 6rem;
@@ -233,4 +234,70 @@
   width: 450px;
   height: 450px;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-p-1,
+  .grid-p-2,
+  .grid-p-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #catalog-item .swiper {
+    width: 600px;
+  }
+
+  .related-products {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .img-shot {
+    height: 400px;
+    width: 400px;
+  }
+
+  .img-shot > img {
+    height: 350px;
+    width: 350px;
+  }
+
+  .item-features > ul,
+  .features-display {
+    width: 80vw;
+    display: flex;
+    gap: 1rem;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .features-display p {
+    text-align: center;
+  }
+
+  .indent {
+    margin-left: 0;
+  }
+
+  .item-features > ul::-webkit-scrollbar,
+  .features-display::-webkit-scrollbar {
+    display: none;
+  }
+
+  .features-display .lighter {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #catalog-item .swiper {
+    width: 400px;
+  }
 }
