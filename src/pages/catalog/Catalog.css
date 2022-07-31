@@ -1,6 +1,6 @@
 #catalog {
   min-height: calc(100vh - 100px);
-  min-width: 700px;
+  min-width: 400px;
   padding-top: 100px;
   display: flex;
   flex-direction: column;

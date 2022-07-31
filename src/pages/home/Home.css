@@ -75,7 +75,7 @@
   #model-image {
     position: relative !important;
     display: block !important;
-    width: 80%;
+    width: 80vw;
     height: auto;
     top: 0;
     left: 0;
@@ -124,7 +124,7 @@
   #model-image {
     position: relative !important;
     display: block !important;
-    width: 80%;
+    width: 80vw;
     height: auto;
     top: 0;
     left: 0;
