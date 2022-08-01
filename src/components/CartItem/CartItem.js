@@ -160,14 +160,16 @@ const CartItem = ({
         </div>
       ) : (
         <div className="cart-item-product">
-          <div className="cart-item-image-and-name">
-            <img className="cart-item-image" src={shampoo} alt="product" />
-            <div className="cart-item-name-and-category">
-              <p className="cart-item-name">{name}</p>
-              <p className="cart-item-category">{category}</p>
+          <div className="name-and-volume">
+            <div className="cart-item-image-and-name">
+              <img className="cart-item-image" src={shampoo} alt="product" />
+              <div className="cart-item-name-and-category">
+                <p className="cart-item-name">{name}</p>
+                <p className="cart-item-category">{category}</p>
+              </div>
             </div>
+            <p className="cart-item-size">225mL</p>
           </div>
-          <p className="cart-item-size">225mL</p>
           <div className="cart-item-quantity-container">
             <input
               className="increase-decrease"

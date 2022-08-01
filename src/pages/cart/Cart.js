@@ -150,12 +150,45 @@ const Cart = ({ cartId, products, setCartClicked }) => {
 
   return (
     <div id="cart">
+      <div id="mobile-summary" className="shopping-cart-summary">
+        <div className="summary-top">
+          <button className="cart-back" onClick={() => handleBack()}>
+            <img src={chevronLeft} alt="back to shopping" /> Back to{' '}
+            {checkoutClicked ? 'Summary' : 'Shopping'}
+          </button>
+          <p>Summary</p>
+          <br />
+          <div className="summary-text-container">
+            <p className="summary-text">Subtotal</p>
+            <p>{formatter.format(subtotal)}</p>
+          </div>
+          <div className="summary-text-container">
+            <p className="summary-text">Tax</p>
+            <p>{formatter.format(tax)}</p>
+          </div>
+        </div>
+        <div className="summary-bottom">
+          <div className="summary-text-container">
+            <p className="summary-text">Total</p>
+            <p>{formatter.format(totalPrice)}</p>
+          </div>
+          <button
+            className={`checkout-btn ${checkoutClicked ? 'invisible-btn' : ''}`}
+            onClick={() => setCheckoutClicked(true)}
+            disabled={checkoutClicked}
+          >
+            CHECKOUT
+          </button>
+        </div>
+      </div>
       <div className="shopping-cart">
-        <button className="cart-back" onClick={() => handleBack()}>
+        <button
+          className="cart-back full-cart-back"
+          onClick={() => handleBack()}
+        >
           <img src={chevronLeft} alt="back to shopping" /> Back to{' '}
           {checkoutClicked ? 'Summary' : 'Shopping'}
         </button>
-        <h1>Shopping Cart</h1>
         <div className="cart-container">
           {checkoutClicked ? (
             <div className="column-flex">
@@ -163,16 +196,19 @@ const Cart = ({ cartId, products, setCartClicked }) => {
               <PaymentInformation totalPrice={totalPrice} />
             </div>
           ) : (
-            <CartItems
-              cart={cart}
-              setCart={setCart}
-              products={products}
-              triggerRemoveToast={triggerRemoveToast}
-            />
+            <>
+              <h1>Shopping Cart</h1>
+              <CartItems
+                cart={cart}
+                setCart={setCart}
+                products={products}
+                triggerRemoveToast={triggerRemoveToast}
+              />
+            </>
           )}
         </div>
       </div>
-      <div className="shopping-cart-summary">
+      <div id="regular-summary" className="shopping-cart-summary">
         <div className="summary-top">
           <p>Summary</p>
           <br />

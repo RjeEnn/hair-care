@@ -183,7 +183,7 @@
 }
 
 .p-4 {
-  width: calc(100% - 10rem);
+  width: calc(100% - 4rem);
   background: #ab998c;
 }
 
@@ -267,7 +267,7 @@
 
   .item-features > ul,
   .features-display {
-    width: 50vw;
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -279,6 +279,14 @@
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .item-container {
+    padding: 2rem;
+  }
+
+  .grid-p-3 > .item-container {
+    padding: 0;
   }
 
   .features-display p {

@@ -426,7 +426,24 @@
   "cart": [
     {
       "id": 1,
-      "cartItems": []
+      "cartItems": [
+        {
+          "productId": 13,
+          "quantity": 3
+        },
+        {
+          "productId": 2,
+          "quantity": 1
+        },
+        {
+          "productId": 5,
+          "quantity": 1
+        },
+        {
+          "productId": 1,
+          "quantity": 1
+        }
+      ]
     }
   ],
   "featured": [

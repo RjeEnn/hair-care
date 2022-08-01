@@ -124,3 +124,51 @@
 .column-flex > p {
   font-weight: 500;
 }
+
+#mobile-summary {
+  display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  #cart {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #cart {
+    display: inline-block;
+    min-height: 100%;
+    top: 0;
+    overflow-y: auto !important;
+  }
+
+  .shopping-cart,
+  .shopping-cart-summary {
+    display: inline-block;
+    width: calc(100% - 4rem);
+    height: fit-content;
+    padding: 2rem;
+  }
+
+  .shopping-cart {
+    overflow-y: auto;
+  }
+
+  .cart-container {
+    display: inline-block;
+    height: fit-content;
+  }
+
+  .full-cart-back {
+    display: none;
+  }
+
+  #mobile-summary {
+    display: flex;
+  }
+
+  #regular-summary {
+    display: none;
+  }
+}
