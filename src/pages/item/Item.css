@@ -1,7 +1,7 @@
 #catalog-item {
   --swiper-theme-color: #000;
   min-height: calc(100vh - 100px);
-  min-width: 600px;
+  min-width: 320px;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -204,7 +204,7 @@
 
 #catalog-item .swiper {
   width: 100%;
-  min-width: 400px;
+  min-width: 300px;
   height: 100%;
   margin-top: 1rem;
   margin-bottom: 6rem;
@@ -247,7 +247,7 @@
   }
 
   #catalog-item .swiper {
-    width: 600px;
+    width: 50vw;
   }
 
   .related-products {
@@ -255,19 +255,22 @@
   }
 
   .img-shot {
-    height: 400px;
-    width: 400px;
+    height: 85vw;
+    width: 85vw;
   }
 
   .img-shot > img {
-    height: 350px;
-    width: 350px;
+    height: 80vw;
+    width: 80vw;
+    object-fit: cover;
   }
 
   .item-features > ul,
   .features-display {
-    width: 80vw;
+    width: 50vw;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
     white-space: nowrap;
     position: relative;
@@ -298,6 +301,12 @@
 
 @media only screen and (max-width: 800px) {
   #catalog-item .swiper {
-    width: 400px;
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .related-products {
+    grid-template-columns: 1fr;
   }
 }

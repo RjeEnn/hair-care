@@ -1,6 +1,6 @@
 #catalog {
   min-height: calc(100vh - 100px);
-  min-width: 400px;
+  min-width: 320px;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -127,5 +127,15 @@
 
   .name-and-back {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sort-and-filter {
+    flex-direction: column;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
   }
 }
