@@ -123,13 +123,13 @@
     position: fixed !important;
     display: inline-block;
     bottom: 0;
-    height: 100vh !important;
+    min-height: 100% !important;
     flex-direction: column;
     justify-content: flex-start !important;
     align-items: center;
     background: #d6d2cb;
     gap: 2rem;
-    overflow: auto;
+    overflow: auto !important;
   }
   .menu-catalog,
   .search-cart {
