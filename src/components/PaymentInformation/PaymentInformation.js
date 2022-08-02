@@ -15,7 +15,6 @@ const PaymentInformation = ({ cartId, setCartClicked }) => {
   const [agree, setAgree] = useState(false)
   const [mockLogin, setMockLogin] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [paymentProcessed, setPaymentProcessed] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
