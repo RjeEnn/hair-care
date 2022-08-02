@@ -14,6 +14,25 @@
   display: flex;
 }
 
+.search-query {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.search-query > button {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  color: #3a3328;
+}
+
+.search-query > button:hover {
+  transform: scale(0.98);
+}
+
 .lighter {
   font-weight: 300;
 }

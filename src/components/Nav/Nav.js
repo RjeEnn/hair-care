@@ -5,19 +5,22 @@ import menu from '../../assets/menu.png'
 import searchIcon from '../../assets/search-icon.png'
 import cartIcon from '../../assets/cart-icon.png'
 import mobileCart from '../../assets/cart-mobile.png'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import MenuDropdown from '../MenuDropdown/MenuDropdown'
 
-const Nav = ({
-  searching,
-  setSearching,
-  setCartClicked,
-  mobileMenuClicked,
-  setMobileMenuClicked,
-}) => {
+const Nav = ({ setCartClicked, mobileMenuClicked, setMobileMenuClicked }) => {
   const location = useLocation().pathname
+  const navigate = useNavigate()
 
   const [searchItem, setSearchItem] = useState('')
+  const [show, setShow] = useState(false)
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+
+    navigate(`catalog?q=${searchItem}`)
+  }
 
   return (
     <div
@@ -31,12 +34,13 @@ const Nav = ({
       </a>
 
       <div className="menu-catalog">
-        <button className="nav-link nav">
+        <button className="nav-link nav" onClick={() => setShow(!show)}>
           <span>
             <img className="nav-icon" src={menuIcon} alt="" />
           </span>
           Menu
         </button>
+        <MenuDropdown show={show} />
         <a className="nav-link nav" href="/catalog">
           <span>
             <img className="nav-icon" src={catalogIcon} alt="" />
@@ -46,30 +50,18 @@ const Nav = ({
       </div>
 
       <div className="search-cart">
-        <button
-          className={`nav-link nav ${searching ? 'invisible' : ''}`}
-          href="/cat"
-          onClick={() => setSearching(true)}
-        >
-          <span>
-            <img
-              className="search-cart-icons"
-              id="search-icon"
-              src={searchIcon}
-              alt=""
-            />
-          </span>
-          Search
-        </button>
-        <div
-          className={`search-input-container ${searching ? '' : 'invisible'}`}
-        >
+        <form onSubmit={(e) => handleSearch(e)} className="search-form">
           <input
             className="search-input"
             type="text"
             placeholder="Search Hair Products"
+            value={searchItem}
+            onChange={(e) => setSearchItem(e.target.value)}
           />
-        </div>
+          <button type="submit" disabled={searchItem === ''}>
+            <img src={searchIcon} alt="search" />
+          </button>
+        </form>
         <button
           className="nav-link nav"
           id="cart-btn"
@@ -105,8 +97,17 @@ const Nav = ({
             mobileMenuClicked ? '' : 'invisible'
           }`}
         >
-          <form>
-            <input type="text" />
+          <form onSubmit={(e) => handleSearch(e)} className="search-form">
+            <input
+              className="search-input"
+              type="text"
+              placeholder="Search Hair Products"
+              value={searchItem}
+              onChange={(e) => setSearchItem(e.target.value)}
+            />
+            <button type="submit" disabled={searchItem === ''}>
+              <img src={searchIcon} alt="search" />
+            </button>
           </form>
           <a href="/about">About</a>
           <a href="/featured">Featured Products</a>

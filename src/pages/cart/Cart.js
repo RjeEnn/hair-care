@@ -193,10 +193,13 @@ const Cart = ({ cartId, products, setCartClicked }) => {
           {checkoutClicked ? (
             <div className="column-flex">
               <p>Checkout</p>
-              <PaymentInformation totalPrice={totalPrice} />
+              <PaymentInformation
+                cartId={cart.id}
+                setCartClicked={setCartClicked}
+              />
             </div>
           ) : (
-            <>
+            <div className="cart-flex-column">
               <h1>Shopping Cart</h1>
               <CartItems
                 cart={cart}
@@ -204,7 +207,7 @@ const Cart = ({ cartId, products, setCartClicked }) => {
                 products={products}
                 triggerRemoveToast={triggerRemoveToast}
               />
-            </>
+            </div>
           )}
         </div>
       </div>
@@ -229,7 +232,7 @@ const Cart = ({ cartId, products, setCartClicked }) => {
           <button
             className={`checkout-btn ${checkoutClicked ? 'invisible-btn' : ''}`}
             onClick={() => setCheckoutClicked(true)}
-            disabled={checkoutClicked}
+            disabled={checkoutClicked || cart.cartItems.length < 1}
           >
             CHECKOUT
           </button>

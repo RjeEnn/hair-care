@@ -49,3 +49,7 @@
   align-items: center;
   gap: 1rem;
 }
+
+.paypal-payment {
+  margin-bottom: 1rem;
+}

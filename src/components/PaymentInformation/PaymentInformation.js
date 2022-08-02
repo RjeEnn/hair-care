@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './PaymentInformation.css'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
-const PaymentInformation = ({ totalPrice }) => {
+const PaymentInformation = ({ cartId, setCartClicked }) => {
   const [email, setEmail] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -13,6 +15,7 @@ const PaymentInformation = ({ totalPrice }) => {
   const [agree, setAgree] = useState(false)
   const [mockLogin, setMockLogin] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [paymentProcessed, setPaymentProcessed] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -21,11 +24,44 @@ const PaymentInformation = ({ totalPrice }) => {
         setLoading(true)
         await new Promise((r) => setTimeout(r, 2000))
         setLoading(false)
+        emptyCart()
       }
     } else {
       setLoading(true)
       await new Promise((r) => setTimeout(r, 2000))
       setLoading(false)
+      emptyCart()
+    }
+  }
+
+  const emptyCart = async () => {
+    if (cartId) {
+      const cartUrl = `${process.env.REACT_APP_DATABASE_URL}/cart/${cartId}`
+      const body = {
+        id: cartId,
+        cartItems: [],
+      }
+
+      const res = await fetch(cartUrl, {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      })
+
+      if (res.ok) {
+        toast.success('Order placed successfully!', {
+          position: 'bottom-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+        setCartClicked(false)
+      }
     }
   }
 
@@ -137,6 +173,7 @@ const PaymentInformation = ({ totalPrice }) => {
 
         <div className={`paypal-payment ${useCard ? 'not-visible' : ''}`}>
           <a
+            className={mockLogin ? 'not-visible' : ''}
             href="https://www.google.com"
             target="_blank"
             rel="noreferrer"
@@ -144,6 +181,9 @@ const PaymentInformation = ({ totalPrice }) => {
           >
             Click here to login to Paypal
           </a>
+          <p className={`lighter ${mockLogin ? '' : 'not-visible'}`}>
+            Successfully logged in with Paypal
+          </p>
         </div>
 
         <label>
@@ -172,6 +212,17 @@ const PaymentInformation = ({ totalPrice }) => {
           )}
         </button>
       </form>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   )
 }

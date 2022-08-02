@@ -428,19 +428,7 @@
       "id": 1,
       "cartItems": [
         {
-          "productId": 13,
-          "quantity": 3
-        },
-        {
-          "productId": 2,
-          "quantity": 1
-        },
-        {
-          "productId": 5,
-          "quantity": 1
-        },
-        {
-          "productId": 1,
+          "productId": 11,
           "quantity": 1
         }
       ]

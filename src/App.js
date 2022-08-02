@@ -4,7 +4,6 @@ import { Nav } from './components'
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [searching, setSearching] = useState(false)
   const [products, setProducts] = useState([])
   const [cartClicked, setCartClicked] = useState(false)
   const [mobileMenuClicked, setMobileMenuClicked] = useState(false)
@@ -33,12 +32,6 @@ function App() {
     return data
   }
 
-  const handleSearchToggle = () => {
-    if (searching) {
-      setSearching(false)
-    }
-  }
-
   var prevScrollpos = window.pageYOffset
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset
@@ -62,7 +55,7 @@ function App() {
 
   return (
     <Router>
-      <div id="app" onClick={() => handleSearchToggle()}>
+      <div id="app">
         {cartClicked ? (
           <Cart
             cartId={1}
@@ -78,8 +71,6 @@ function App() {
         ></div>
         <div>
           <Nav
-            searching={searching}
-            setSearching={setSearching}
             setCartClicked={setCartClicked}
             mobileMenuClicked={mobileMenuClicked}
             setMobileMenuClicked={setMobileMenuClicked}

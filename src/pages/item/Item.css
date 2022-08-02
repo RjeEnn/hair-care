@@ -1,6 +1,7 @@
 #catalog-item {
   --swiper-theme-color: #000;
   min-height: calc(100vh - 100px);
+  overflow-x: hidden;
   min-width: 320px;
   padding-top: 100px;
   display: flex;

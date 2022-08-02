@@ -171,6 +171,7 @@ const Item = ({ products }) => {
           mousewheel={true}
           keyboard={true}
           slidesPerView={1}
+          spaceBetween={100}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           className="mySwiper"
         >

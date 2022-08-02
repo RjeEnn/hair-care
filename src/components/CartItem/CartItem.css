@@ -16,7 +16,8 @@
 .name-and-volume {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 4rem;
 }
 
 .cart-item-image-and-name {

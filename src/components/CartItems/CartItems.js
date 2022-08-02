@@ -6,7 +6,6 @@ const CartItems = ({ cart, products, setCart, triggerRemoveToast }) => {
     <div id="cart-items">
       <div className="cart-heading-container">
         <p className="cart-headings">Item</p>
-        <p className="cart-headings">Size</p>
         <p className="cart-headings">Quantity</p>
         <p className="cart-headings">Price</p>
       </div>

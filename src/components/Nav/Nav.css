@@ -47,6 +47,27 @@
   gap: 2rem;
 }
 
+.search-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form > button {
+  background: none;
+  border: none;
+}
+
+.search-form > button:hover {
+  transform: scale(0.95);
+  border-radius: 50px;
+}
+
+.search-form > button:active {
+  transform: scale(0.92);
+}
+
 .nav-link {
   display: flex;
   align-items: center;
@@ -130,6 +151,7 @@
     background: #d6d2cb;
     gap: 2rem;
     overflow: auto !important;
+    padding-bottom: 100px;
   }
   .menu-catalog,
   .search-cart {

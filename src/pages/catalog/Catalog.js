@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { ProductCard, FilterDropdown, SortDropdown } from '../../components'
 import chevronLeft from '../../assets/chevron-left.png'
 import noResults from '../../assets/no-results.png'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 const Catalog = ({ products }) => {
   const [displayedProducts, setDisplayedProducts] = useState(products)
@@ -13,6 +14,9 @@ const Catalog = ({ products }) => {
     male: true,
     female: true,
   })
+
+  const [searchParams] = useSearchParams()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const getTypes = () => {
@@ -27,12 +31,26 @@ const Catalog = ({ products }) => {
       return Object.entries(typeCounts)
     }
 
-    setDisplayedProducts(products)
+    if (searchParams.has('q')) {
+      setDisplayedProducts(
+        products.filter(
+          (product) =>
+            product.name
+              .toLowerCase()
+              .includes(searchParams.get('q').toLowerCase()) ||
+            product.type
+              .toLowerCase()
+              .includes(searchParams.get('q').toLowerCase())
+        )
+      )
+    } else {
+      setDisplayedProducts(products)
+    }
 
     let typeCounts = getTypes()
     typeCounts.map((type) => type.push(true))
     setTypes(typeCounts)
-  }, [products])
+  }, [products, searchParams])
 
   useEffect(() => {
     setLoading(false)
@@ -83,6 +101,18 @@ const Catalog = ({ products }) => {
     updatedByType = getUpdatedProductsByType()
     updatedByGender = getUpdatedProductsByGender(updatedByType)
 
+    if (searchParams.has('q')) {
+      updatedByGender = updatedByGender.filter(
+        (product) =>
+          product.name
+            .toLowerCase()
+            .includes(searchParams.get('q').toLowerCase()) ||
+          product.type
+            .toLowerCase()
+            .includes(searchParams.get('q').toLowerCase())
+      )
+    }
+
     if (ascending === true) {
       setDisplayedProducts(
         updatedByGender.sort((a, b) => a.name.localeCompare(b.name))
@@ -92,7 +122,7 @@ const Catalog = ({ products }) => {
         updatedByGender.sort((a, b) => b.name.localeCompare(a.name))
       )
     }
-  }, [selectedGenders, types, products, ascending])
+  }, [selectedGenders, types, products, ascending, searchParams])
 
   return (
     <div id="catalog">
@@ -115,6 +145,18 @@ const Catalog = ({ products }) => {
           <SortDropdown ascending={ascending} setAscending={setAscending} />
         </div>
       </div>
+      {searchParams.get('q') ? (
+        <div className="search-query">
+          <p className="lighter">
+            Showing search results for '{searchParams.get('q')}'
+          </p>
+          <button onClick={() => navigate('/catalog', { replace: true })}>
+            Clear Search?
+          </button>
+        </div>
+      ) : (
+        ''
+      )}
       <div className="container-catalog">
         <div className="products">
           {displayedProducts.length <= 0 ? (
