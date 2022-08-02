@@ -143,11 +143,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .item-description,
 .item-benefits {
-  width: 60%;
+  width: 80%;
 }
 
 .item-text-heading {
@@ -245,6 +246,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .item-description-and-benefits {
+    width: 100vw;
   }
 
   #catalog-item .swiper {

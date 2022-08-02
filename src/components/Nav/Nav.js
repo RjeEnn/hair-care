@@ -20,6 +20,7 @@ const Nav = ({ setCartClicked, mobileMenuClicked, setMobileMenuClicked }) => {
     e.preventDefault()
 
     navigate(`catalog?q=${searchItem}`)
+    setMobileMenuClicked(false)
   }
 
   return (
