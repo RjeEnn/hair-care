@@ -147,6 +147,16 @@
   .search-input {
     width: 100px;
   }
+
+  .nav-menu-expand .search-input {
+    width: 250px;
+    border-bottom: 2px solid #3a3328;
+  }
+
+  .search-form {
+    background: none;
+    box-shadow: none;
+  }
 }
 
 /* For extremely small screen devices (595px and below) */
