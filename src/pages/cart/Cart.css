@@ -152,6 +152,7 @@
 
   .shopping-cart {
     overflow-y: auto;
+    padding-bottom: 4rem;
   }
 
   .cart-container {
